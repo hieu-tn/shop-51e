@@ -1,0 +1,11 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: $base-font-face;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $base-color;
+  font-weight: 300;
+}

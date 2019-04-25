@@ -1,0 +1,22 @@
+.section-breadcrumb {
+  padding: .5rem 0;
+  font-weight: normal;
+
+  & > .container > .row {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -.5rem; left: 0;
+      width: 100%; height: .1rem;
+      background: get-color('vista-white');
+    }
+  }
+
+  a {
+    &:hover {
+      color: get-color('shiraz');
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import 'abstracts/vars',
+  'abstracts/mixins',
+  'abstracts/functions';
+
+@import 'base/reset',
+  'base/backgrounds',
+  'base/colors',
+  'base/fonts',
+  'base/icons',
+  'base/typos',
+  'base/base';
+
+@import 'layouts/grids',
+  'layouts/header',
+  'layouts/footer';
+
+@import 'components/page-title',
+  'components/breadcrumb',
+  'components/search-form';
+
+@import 'pages/home',
+  'pages/stores',
+  'pages/search';

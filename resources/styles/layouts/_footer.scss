@@ -1,0 +1,96 @@
+footer.site-footer {
+  background : get-color('pampas');
+  font-size: .9rem;
+  padding: 2rem 0;
+
+  .title {
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .menu-footer-container {
+    .menu {
+      & > .menu-item {
+        margin-top: 1.5rem;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        & > a {
+          font-size: 1rem;
+          font-weight: bold;
+          text-transform: uppercase;
+          margin-bottom: 1rem;
+        }
+
+        & > .sub-menu {
+          & > .menu-item {
+            & > a {
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .channels {
+    a {
+      vertical-align: middle;
+      margin-right: 1rem;
+
+      @include respond-to(sm) {
+        margin-right: 2rem;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .social-sharing {
+    font-size: 1.3rem;
+  }
+
+  .payment-methods {
+    img {
+      &.mastercard {
+        height: 3rem;
+      }
+
+      &.visa, &.paypal {
+        height: 2rem;
+      }
+    }
+  }
+
+  .delivery {
+    img {
+      height: 3rem;
+    }
+  }
+
+  .company-legal {
+    a {
+      display: block;
+    }
+  }
+
+  .copyright {
+    padding-top: 1rem;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: .1rem;
+      background: get-color('pumice');
+    }
+  }
+}

@@ -1,0 +1,52 @@
+form.search-form {
+  display: none;
+  position: absolute;
+  top: 100%; left: 0;
+  width: 100%;
+  padding: .5rem;
+  background: get-color('pumice');
+  text-align: left;
+  z-index: 1;
+
+  @include respond-to(lg) {
+    display: block !important;
+    position: relative;
+    top: 0; left: 0;
+    padding: 0;
+    background: transparent;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 100%; left: 0;
+      width: 100%; height: .05rem;
+      background: get-color('white');
+    }
+  }
+
+  input {
+    border: none;
+    font-size: 1rem;
+    width: 100%;
+    padding: .5rem 2rem .5rem .5rem;
+
+    @include respond-to(lg) {
+      background: transparent;
+      color: get-color('white');
+      padding: 0 2rem 0 .5rem;
+    }
+  }
+
+  .btn-submit {
+    position: absolute;
+    top: 50%; right: 1rem;
+    transform: translate(0, -50%);
+    color: get-color('abbey');
+    padding: 0;
+
+    @include respond-to(lg) {
+      right: .5rem;
+      color: get-color('white');
+    }
+  }
+}

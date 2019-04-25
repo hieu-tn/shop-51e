@@ -1,0 +1,23 @@
+body.page-template-stores {
+  .section-map {
+    #map {
+      height: 40vh;
+    }
+  }
+
+  .section-shops {
+    padding: 3rem 0;
+
+    .shop {
+      margin-bottom: 1rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .name {
+      margin-bottom: .5rem;
+    }
+  }
+}

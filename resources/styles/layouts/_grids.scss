@@ -1,0 +1,64 @@
+@import '../../../node_modules/coffeekraken-gridle/flex';
+
+@include g-setup( (
+  context : $columns, 			// number of columns in your grid
+  column-width : null, 	// by default it's percentage based depending on the context but you can specify a column width yourself
+  gutter-width : 30px,	// size of the gutters
+  gutter-height : 0, 		// size of top and bottom gutters
+  gutter-top 	  : 0, 		// size of top gutter
+  gutter-bottom : 0, 		// size of bottom gutter
+  gutter-left   : 15px, 	// size of left gutter
+  gutter-right  : 15px, 	// size of right gutter
+  direction : ltr, 		// direction
+  dir-attribute : false, 	// if need to generate support for dir="rtl" in order to set part of layout direction
+  states-classes : false, // if we need to generate the states classes
+  name-multiplicator : 1, // if 5, generate gr-5, gr-10, etc...
+  classes-prefix : '' 	// the prefix used for all classes
+
+) );
+
+/**
+* States are usually initialized with screen sizes :
+*/
+@include g-register-state ( xs , (
+  max-width : 575px
+) );
+@include g-register-state ( sm , (
+  min-width : 576px,
+  max-width : 767px
+) ) ;
+
+@include g-register-state ( md , (
+  min-width : 768px,
+  max-width : 991px
+) ) ;
+
+@include g-register-state ( lg , (
+  min-width : 992px,
+  max-width : 1199px
+) ) ;
+
+@include g-register-state ( xl , (
+  min-width : 1200px
+) ) ;
+
+// generate classes :
+@include g-custom-class( ( 'text', '-', 'center', '@', '%state' ) ) {
+  text-align : center;
+}
+@include g-custom-class( ( 'mt', '-', '1-5', '@', '%state' ) ) {
+  margin-top: 1.5rem;
+}
+@include g-custom-class( ( 'mt', '-', '2', '@', '%state' ) ) {
+  margin-top: 2rem;
+}
+
+@include g-classes();
+
+// manage container width :
+.container {
+  @include g-container();
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 15px;
+}

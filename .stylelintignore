@@ -1,0 +1,4 @@
+resources/styles/abstracts/**/*.scss
+resources/styles/base/_reset.scss
+resources/styles/base/_icons.scss
+resources/styles/main.scss

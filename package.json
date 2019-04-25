@@ -1,0 +1,70 @@
+{
+  "name": "shop_51e",
+  "version": "1.0.0",
+  "main": "index.php",
+  "repository": "git@github.com:Fabius-devaholic/shop_51e.git",
+  "author": "Hieu Tran <vayu411@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "NODE_ENV=development webpack-dev-server --mode=development --inline --config webpack.config.js",
+    "prod": "NODE_ENV=production webpack --mode=production --progress --hide-modules --config webpack.config.js"
+  },
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "dependencies": {
+    "document-register-element": "^1.13.1",
+    "jquery": "^3.3.1",
+    "slick-carousel": "^1.8.1",
+    "vue": "^2.6.10",
+    "vue-custom-element": "^3.2.6",
+    "vue-loader": "^15.7.0",
+    "webpack": "^4.20.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.1.5",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^7.1.5",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "coffeekraken-gridle": "^3.0.1",
+    "css-loader": "^2.1.1",
+    "eslint": "^5.6.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "file-loader": "^3.0.1",
+    "image-webpack-loader": "^4.6.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.9.3",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "path": "^0.12.7",
+    "postcss-import": "^12.0.0",
+    "postcss-loader": "^3.0.0",
+    "postcss-url": "^8.0.0",
+    "sass-loader": "^7.1.0",
+    "sass-resources-loader": "^2.0.0",
+    "style-loader": "^0.23.1",
+    "stylelint": "^9.6.0",
+    "stylelint-webpack-plugin": "^0.10.5",
+    "svg-url-loader": "^2.3.2",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "url-loader": "^1.1.2",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.10",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
+  }
+}

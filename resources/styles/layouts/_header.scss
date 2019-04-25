@@ -1,0 +1,286 @@
+header.site-header {
+  .service-bar {
+    display: flex;
+    flex-wrap: wrap;
+    background: get-color('black');
+    color: get-color('white');
+    font-size: .9rem;
+    font-weight: normal;
+    padding: .5rem 1rem;
+    position: relative;
+
+    @include respond-to(lg) {
+      padding: .5rem 4rem;
+      justify-content: space-between;
+    }
+
+    .left, .right {
+      display: flex;
+      width: 100%;
+
+      @include respond-to(lg) {
+        width: auto;
+      }
+
+      &.right {
+        margin-top: 1rem;
+
+        @include respond-to(lg) {
+          margin-top: 0;
+        }
+      }
+    }
+
+    .store-locator, .customer-service, .account, .search {
+      //padding: 0 1rem;
+      position: relative;
+      width: 100%;
+
+      @include respond-to(lg) {
+        width: auto;
+        padding: 0 1rem;
+      }
+
+      &.search {
+        position: initial;
+      }
+
+      &.customer-service {
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0; left: 0;
+          width: .1rem; height: 100%;
+          background: get-color('dusty-gray');
+        }
+      }
+    }
+  }
+
+  .menu-bar {
+    padding: 1rem 0;
+    position: relative;
+
+    @include respond-to(lg) {
+      padding: 0;
+    }
+
+    .logo {
+      @include respond-to(lg) {
+        padding: 1rem 0;
+      }
+
+      img {
+        width: 4rem;
+      }
+    }
+
+    .mobile-trigger {
+      height: 1.5rem;
+      width: 2rem;
+      position: absolute;
+      top: 50%; right: 15px;
+      transform: translate(0, -50%);
+      cursor: pointer;
+
+      i {
+        display: block;
+        background: get-color('abbey');
+        height: .3rem;
+        border-radius: 1rem;
+        position: relative;
+        pointer-events: none;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: .6rem; left: 50%;
+          width: 80%; height: .2rem;
+          transform: translate(-50%, 0);
+          background: get-color('abbey');
+          border-radius: 1rem;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 1.2rem; left: 0;
+          width: 100%; height: .3rem;
+          background: get-color('abbey');
+          border-radius: 1rem;
+        }
+      }
+    }
+  }
+
+  .main-navigation {
+    display: none;
+    padding: 1rem;
+    font-weight: bold;
+    position: absolute;
+    top: 100%; left: 0;
+    width: 100%;
+    background: get-color('white');
+    z-index: 1;
+    box-shadow: 0 .5rem .5rem -.5rem get-color('dusty-gray');
+
+    @include respond-to(lg) {
+      display: block;
+      box-shadow: none;
+      position: relative;
+      top: 0;
+      padding: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 50%; height: .1rem;
+      top: 0; left: 50%;
+      transform: translate(-50%, 0);
+      background: get-color('silver');
+    }
+
+    .menu {
+      position: relative;
+      height: 100%;
+
+      @include respond-to(lg) {
+        position: initial;
+      }
+
+      & > .menu-item {
+        height: 100%;
+        padding: 0 2rem 1rem 0;
+        position: relative;
+
+        @include respond-to(lg) {
+          display: inline-block;
+          padding: 0 2rem 1rem;
+          position: initial;
+
+          &:last-child {
+            padding-right: 0;
+          }
+
+          &::after {
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            height: 100%;
+          }
+
+          &:hover {
+            & > .sub-menu {
+              display: block;
+            }
+
+            & > a {
+              &::before {
+                display: block;
+              }
+            }
+          }
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          bottom: -1rem; left: 0; right: 0;
+          display: none;
+          height: .1rem;
+          background: get-color('pumice');
+        }
+
+        &:first-child {
+          padding-left: 0;
+        }
+
+        span.toggle-expanded {
+          position: absolute;
+          top: 0; right: 0;
+          font-size: 1.2rem;
+          line-height: normal;
+          padding: 0 .5rem;
+        }
+
+        a {
+          &:hover {
+            color: get-color('shiraz');
+          }
+        }
+
+        & > a {
+          position: relative;
+
+          &::before {
+            content: '';
+            position: absolute;
+            bottom: -1rem; left: 0; right: 0;
+            display: none;
+            height: .1rem;
+            background: get-color('shiraz');
+            //background: get-color('pumice');
+          }
+        }
+      }
+
+      & > .menu-item-has-children {
+        & > .sub-menu {
+          display: none;
+
+          @include respond-to(lg) {
+            position: absolute;
+            top: 100%; left: 0; right: 0;
+            min-height: 30vh;
+            padding: 1rem;
+            box-shadow: 0 .5rem 2rem -.5rem get-color('dusty-gray');
+            background-repeat: no-repeat;
+            background-position: 100% center;
+            background-color: get-color('white');
+            background-size: contain;
+            z-index: 1;
+          }
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            background: linear-gradient(to right, get-color('white'), get-color('white'), transparent);
+            z-index: -1;
+          }
+
+          & > .menu-item {
+            margin-bottom: .5rem;
+
+            @include respond-to(lg) {
+              display: inline-block;
+              width: 25%;
+              vertical-align: top;
+            }
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            & > a {
+              margin-bottom: .5rem;
+            }
+
+            & > .sub-menu {
+              .menu-item {
+                width: 100%;
+                padding: 0;
+                font-weight: normal;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
