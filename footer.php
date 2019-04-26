@@ -41,16 +41,16 @@
           </div>
           <div class="payment-methods mt-1-5">
             <p class="title"><b><?php _e( 'payment', 'shop51e' ) ?></b></p>
-            <a><img class="mastercard" src="/wp-content/themes/shop_51e/assets/payment_mastercard.png" /></a>
-            <a><img class="visa" src="/wp-content/themes/shop_51e/assets/payment_visa.png" /></a>
-            <a><img class="paypal" src="/wp-content/themes/shop_51e/assets/payment_paypal.png" /></a>
+            <a><img class="mastercard" src="/wp-content/themes/shop-51e/assets/payment_mastercard.png" /></a>
+            <a><img class="visa" src="/wp-content/themes/shop-51e/assets/payment_visa.png" /></a>
+            <a><img class="paypal" src="/wp-content/themes/shop-51e/assets/payment_paypal.png" /></a>
           </div>
           <div class="delivery mt-1-5">
             <p class="title"><b><?php _e( 'delivery', 'shop51e' ) ?></b></p>
             <div>
-              <a><img src="/wp-content/themes/shop_51e/assets/delivery_parcel_force.jpg" /></a>
-              <a><img src="/wp-content/themes/shop_51e/assets/delivery_american_express.jpg" /></a>
-              <a><img src="/wp-content/themes/shop_51e/assets/delivery_dhl_express.jpg" /></a>
+              <a><img src="/wp-content/themes/shop-51e/assets/delivery_parcel_force.jpg" /></a>
+              <a><img src="/wp-content/themes/shop-51e/assets/delivery_american_express.jpg" /></a>
+              <a><img src="/wp-content/themes/shop-51e/assets/delivery_dhl_express.jpg" /></a>
             </div>
           </div>
         </div>

@@ -2,7 +2,7 @@
   "name": "shop_51e",
   "version": "1.0.0",
   "main": "index.php",
-  "repository": "git@github.com:Fabius-devaholic/shop_51e.git",
+  "repository": "git@github.com:hieu-tn/shop-51e.git",
   "author": "Hieu Tran <vayu411@gmail.com>",
   "license": "MIT",
   "scripts": {

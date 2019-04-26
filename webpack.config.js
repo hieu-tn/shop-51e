@@ -188,7 +188,7 @@ module.exports = (env, argv) => {
   }
 
   if (argv.mode === 'production') {
-    config.output.publicPath = '/wp-content/themes/shop_51e/'
+    config.output.publicPath = '/wp-content/themes/shop-51e/'
     let plugins = [
       new webpack.HashedModuleIdsPlugin(),
       new UglifyJsPlugin({

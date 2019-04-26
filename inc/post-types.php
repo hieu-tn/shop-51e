@@ -58,40 +58,6 @@ class Shop51ePostTypes {
         'menu_icon'             => 'dashicons-screenoptions',
         'supports'              => [ 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ]
       ],
-//      order
-      'order' => [
-        'labels'                => [
-          'name'               => _x( 'Orders', 'post type general name', 'shop51e' ),
-          'singular_name'      => _x( 'Order', 'post type singular name', 'shop51e' ),
-          'menu_name'          => _x( 'Orders', 'admin menu', 'shop51e' ),
-          'name_admin_bar'     => _x( 'Order', 'add new on admin bar', 'shop51e' ),
-          'add_new'            => __( 'Add New', 'Order', 'shop51e' ),
-          'add_new_item'       => __( 'Add New Order', 'shop51e' ),
-          'new_item'           => __( 'New Order', 'shop51e' ),
-          'edit_item'          => __( 'Edit Order', 'shop51e' ),
-          'view_item'          => __( 'View Order', 'shop51e' ),
-          'all_items'          => __( 'All Orders', 'shop51e' ),
-          'search_items'       => __( 'Search Orders', 'shop51e' ),
-          'parent_item_colon'  => __( 'Parent Orders:', 'shop51e' ),
-          'not_found'          => __( 'No Orders found.', 'shop51e' ),
-          'not_found_in_trash' => __( 'No Orders found in Trash.', 'shop51e' )
-        ],
-        'description'           => __( 'Description.', 'shop51e' ),
-        'public'                => true,
-        'publicly_queryable'    => true,
-        'show_ui'               => true,
-        'show_in_menu'          => true,
-        'query_var'             => true,
-        'capability_type'       => 'post',
-        'has_archive'           => true,
-        'hierarchical'          => false,
-        'menu_position'         => 5,
-        'show_in_rest'          => true,
-        'rest_base'             => 'orders',
-        'rest_controller_class' => 'WP_REST_Posts_Controller',
-        'menu_icon'             => 'dashicons-cart',
-        'supports'              => [ 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ]
-      ],
 //      promotion
       'promotion' => [
         'labels'                => [
